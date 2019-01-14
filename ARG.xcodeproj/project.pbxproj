@@ -14,6 +14,7 @@
 		2E877FCB21C9355400E76CE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E877FC921C9355400E76CE3 /* LaunchScreen.storyboard */; };
 		2E877FD621C9355400E76CE3 /* ARGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E877FD521C9355400E76CE3 /* ARGTests.swift */; };
 		2E877FE121C9355400E76CE3 /* ARGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E877FE021C9355400E76CE3 /* ARGUITests.swift */; };
+		2E877FF021C9355F00E76CE3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E877FEF21C9355F00E76CE3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2E877FDC21C9355400E76CE3 /* ARGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E877FE021C9355400E76CE3 /* ARGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGUITests.swift; sourceTree = "<group>"; };
 		2E877FE221C9355400E76CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E877FEF21C9355F00E76CE3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E877FF021C9355F00E76CE3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				2E877FD421C9355400E76CE3 /* ARGTests */,
 				2E877FDF21C9355400E76CE3 /* ARGUITests */,
 				2E877FBE21C9355300E76CE3 /* Products */,
+				2E877FEE21C9355F00E76CE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				2E877FE221C9355400E76CE3 /* Info.plist */,
 			);
 			path = ARGUITests;
+			sourceTree = "<group>";
+		};
+		2E877FEE21C9355F00E76CE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E877FEF21C9355F00E76CE3 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +205,11 @@
 				TargetAttributes = {
 					2E877FBC21C9355300E76CE3 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					2E877FD021C9355400E76CE3 = {
 						CreatedOnToolsVersion = 10.1;
