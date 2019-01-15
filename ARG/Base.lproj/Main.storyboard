@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Главная-->
+        <!--Main-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ARG" customModuleProvider="target" sceneMemberID="viewController">
@@ -121,7 +121,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Главная" id="pPr-VF-Mrj"/>
+                    <navigationItem key="navigationItem" title="Main" id="pPr-VF-Mrj"/>
                     <connections>
                         <outlet property="mapView" destination="2dR-Be-eLS" id="p5Z-UY-M3L"/>
                     </connections>
