@@ -31,6 +31,17 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    func prepareRoute(poiWorks: [POIwork]) -> [MKMapItem] {
+        var res: [MKMapItem] = []
+        for pw in poiworks {
+            let poiPlaceMaker: MKPlacemark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: pw.coordinate.latitude, longitude: pw.coordinate.longitude))
+            let mapItem: MKMapItem = MKMapItem(placemark: poiPlaceMaker)
+            res.append(mapItem)
+        }
+        
+        return res
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,30 +65,26 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         loadInitialData()
         mapView.addAnnotations(poiworks)
         
-//        do {
-//            showImHere(mapView)
-//        } catch {
-//            NSLog(error as! String)
-//        }
+        do {
+            showImHere(mapView)
+        } catch {
+            NSLog(error as! String)
+        }
         
-//        var annotations: [MKAnnotation] = []
-//        var locationTuples: [(mapItem: MKMapItem, annotation: MKAnnotation)]!
-//
-//        locationTuples = prepareRoute()
-//        for (_, a) in locationTuples { annotations.append(a) }
-//
-//        let oneDirection = createDirection(locationTuples[0].mapItem, locationTuples[1].mapItem)
-//        drawDirection(oneDirection)
-//        let twoDirection = createDirection(locationTuples[1].mapItem, locationTuples[2].mapItem)
-//        drawDirection(twoDirection)
-//        let threeDirection = createDirection(locationTuples[2].mapItem, locationTuples[3].mapItem)
-//        drawDirection(threeDirection)
-//        let fourDirection = createDirection(locationTuples[3].mapItem, locationTuples[4].mapItem)
-//        drawDirection(fourDirection)
-//        let fiveDirection = createDirection(locationTuples[4].mapItem, locationTuples[5].mapItem)
-//        drawDirection(fiveDirection)
-//        let sixDirection = createDirection(locationTuples[5].mapItem, locationTuples[6].mapItem)
-//        drawDirection(sixDirection)
+        var annotations: [MKAnnotation] = []
+        let mapItems = prepareRoute(poiWorks: poiworks)
+        let oneDirection = createDirection(mapItems[0], mapItems[1])
+        drawDirection(oneDirection)
+        let twoDirection = createDirection(mapItems[1], mapItems[2])
+        drawDirection(twoDirection)
+        let threeDirection = createDirection(mapItems[2], mapItems[3])
+        drawDirection(threeDirection)
+        let fourDirection = createDirection(mapItems[3], mapItems[4])
+        drawDirection(fourDirection)
+        let fiveDirection = createDirection(mapItems[4], mapItems[5])
+        drawDirection(fiveDirection)
+        let sixDirection = createDirection(mapItems[5], mapItems[6])
+        drawDirection(sixDirection)
 //
 //        showAnnotation(annotations)
     }
@@ -164,95 +171,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     func showAnnotation(_ annotations: [MKAnnotation]) {
         // 6. The annotations are displayed on the map
         self.mapView.showAnnotations(annotations, animated: true )
-    }
-    
-    func prepareRoute() -> [(MKMapItem, MKAnnotation)] {
-        // point_one: Музей «Портомойня» ул. малая покровская 9
-        // point_two: Дом памяти М.И. Цветаевой ул. Малая покровская 20 (билет 150р) Аудио Гид
-        // point_three: площадь и памятник-бюст М.И. Цветаевой ул. малая покровская/Казанская
-        // point_four: Библиотека Серебряного века ул. Казанская 61 (билет 50р)
-        // point_five: Литературный музей М.И. Цветаевой   (есть аудиогид) (билет 100р) ул. Казанская 61
-        // point_six: Покровская церковь ул. Казанская 4
-        // point_seven: могила М.И. Цветаевой на Петропавловском кладбище  ул.Тугарова
-        
-        // 2. Set the latitude and longtitude of the locations
-        let point_one = CLLocationCoordinate2D(latitude: 55.755607, longitude: 52.0695783)
-        let point_two = CLLocationCoordinate2D(latitude: 55.7551569, longitude: 52.0698144)
-        let point_three = CLLocationCoordinate2D(latitude: 55.7544825, longitude: 52.0693448)
-        let point_four = CLLocationCoordinate2D(latitude: 55.754717, longitude: 52.0686564)
-        let point_five = CLLocationCoordinate2D(latitude: 55.754717, longitude: 52.0686564)
-        let point_six = CLLocationCoordinate2D(latitude: 55.7578106, longitude: 52.0405674)
-        let point_seven = CLLocationCoordinate2D(latitude: 55.771964, longitude: 52.0739098)
-
-        // 3. Create placemark objects containing the location's coordinates
-        let onePlacemark = MKPlacemark(coordinate: point_one, addressDictionary: nil)
-        let twoPlackmark = MKPlacemark(coordinate: point_two, addressDictionary: nil)
-        let threePlacemark = MKPlacemark(coordinate: point_three, addressDictionary: nil)
-        let fourPlacemark = MKPlacemark(coordinate: point_four, addressDictionary: nil)
-        let fivePlacemark = MKPlacemark(coordinate: point_five, addressDictionary: nil)
-        let sixPlacemark = MKPlacemark(coordinate: point_six, addressDictionary: nil)
-        let sevenPlacemark = MKPlacemark(coordinate: point_seven, addressDictionary: nil)
-
-        // 4. MKMapitems are used for routing. This class encapsulates information about a specific point on the map
-        let oneMapItem = MKMapItem(placemark: onePlacemark)
-        let twoMapItem = MKMapItem(placemark: twoPlackmark)
-        let threeMapItem = MKMapItem(placemark: threePlacemark)
-        let fourMapItem = MKMapItem(placemark: fourPlacemark)
-        let fiveMapItem = MKMapItem(placemark: fivePlacemark)
-        let sixMapItem = MKMapItem(placemark: sixPlacemark)
-        let sevenMapItem = MKMapItem(placemark: sevenPlacemark)
-
-        // 5. Annotations are added which shows the name of the placemarks
-        let oneAnnotation = MKPointAnnotation()
-        oneAnnotation.title = "Музей \"Портомойня\""
-        
-        if let location = onePlacemark.location {
-            oneAnnotation.coordinate = location.coordinate
-        }
-        
-        let twoAnnotation = MKPointAnnotation()
-        twoAnnotation.title = "Дом памяти М.И. Цветаевой"
-        
-        if let location = twoPlackmark.location {
-            twoAnnotation.coordinate = location.coordinate
-        }
-        
-        let threeAnnotation = MKPointAnnotation()
-        threeAnnotation.title = "Памятник-бюст М.И. Цветаевой"
-        
-        if let location = threePlacemark.location {
-            threeAnnotation.coordinate = location.coordinate
-        }
-        
-        let fourAnnotation = MKPointAnnotation()
-        fourAnnotation.title = "Библиотека Серебряного века"
-        
-        if let location = fourPlacemark.location {
-            fourAnnotation.coordinate = location.coordinate
-        }
-        
-        let fiveAnnotation = MKPointAnnotation()
-        fiveAnnotation.title = "Литературный музей М.И. Цветаевой"
-        
-        if let location = fivePlacemark.location {
-            fiveAnnotation.coordinate = location.coordinate
-        }
-        
-        let sixAnnotation = MKPointAnnotation()
-        sixAnnotation.title = "Покровская церковь"
-        
-        if let location = sixPlacemark.location {
-            sixAnnotation.coordinate = location.coordinate
-        }
-        
-        let sevenAnnotation = MKPointAnnotation()
-        sevenAnnotation.title = "Могила М.И. Цветаевой"
-        
-        if let location = sevenPlacemark.location {
-            sevenAnnotation.coordinate = location.coordinate
-        }
-        
-        return [(oneMapItem, oneAnnotation), (twoMapItem, twoAnnotation), (threeMapItem, threeAnnotation), (fourMapItem, fourAnnotation), (fiveMapItem, fiveAnnotation), (sixMapItem, sixAnnotation), (sevenMapItem, sevenAnnotation)]
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
