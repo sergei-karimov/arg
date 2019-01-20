@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2E929121F4CC3E00717F0A /* RoutePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */; };
 		2E877FC121C9355300E76CE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E877FC021C9355300E76CE3 /* AppDelegate.swift */; };
 		2E877FC321C9355300E76CE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E877FC221C9355300E76CE3 /* ViewController.swift */; };
 		2E877FC621C9355300E76CE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E877FC421C9355300E76CE3 /* Main.storyboard */; };
@@ -15,6 +16,10 @@
 		2E877FD621C9355400E76CE3 /* ARGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E877FD521C9355400E76CE3 /* ARGTests.swift */; };
 		2E877FE121C9355400E76CE3 /* ARGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E877FE021C9355400E76CE3 /* ARGUITests.swift */; };
 		2E877FF021C9355F00E76CE3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E877FEF21C9355F00E76CE3 /* MapKit.framework */; };
+		2E9FB76D21EE192C00AD2078 /* POIwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FB76C21EE192C00AD2078 /* POIwork.swift */; };
+		2E9FB77421EE6EED00AD2078 /* PublicPOI_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FB77121EE6EED00AD2078 /* PublicPOI_en.json */; };
+		2E9FB77521EE6EED00AD2078 /* PublicPOI_rus.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FB77221EE6EED00AD2078 /* PublicPOI_rus.json */; };
+		2E9FB77621EE6EED00AD2078 /* PublicPOI_tat.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FB77321EE6EED00AD2078 /* PublicPOI_tat.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePopupViewController.swift; sourceTree = "<group>"; };
 		2E877FBD21C9355300E76CE3 /* ARG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E877FC021C9355300E76CE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E877FC221C9355300E76CE3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		2E877FE021C9355400E76CE3 /* ARGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGUITests.swift; sourceTree = "<group>"; };
 		2E877FE221C9355400E76CE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E877FEF21C9355F00E76CE3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2E9FB76C21EE192C00AD2078 /* POIwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIwork.swift; sourceTree = "<group>"; };
+		2E9FB76E21EE68CC00AD2078 /* tt-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "tt-RU"; path = "tt-RU.lproj/Main.strings"; sourceTree = "<group>"; };
+		2E9FB76F21EE68CC00AD2078 /* tt-RU */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "tt-RU"; path = "tt-RU.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		2E9FB77121EE6EED00AD2078 /* PublicPOI_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PublicPOI_en.json; path = Resourses/PublicPOI_en.json; sourceTree = "<group>"; };
+		2E9FB77221EE6EED00AD2078 /* PublicPOI_rus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PublicPOI_rus.json; path = Resourses/PublicPOI_rus.json; sourceTree = "<group>"; };
+		2E9FB77321EE6EED00AD2078 /* PublicPOI_tat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PublicPOI_tat.json; path = Resourses/PublicPOI_tat.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,12 +113,17 @@
 		2E877FBF21C9355300E76CE3 /* ARG */ = {
 			isa = PBXGroup;
 			children = (
+				2E9FB77121EE6EED00AD2078 /* PublicPOI_en.json */,
+				2E9FB77221EE6EED00AD2078 /* PublicPOI_rus.json */,
+				2E9FB77321EE6EED00AD2078 /* PublicPOI_tat.json */,
 				2E877FC021C9355300E76CE3 /* AppDelegate.swift */,
 				2E877FC221C9355300E76CE3 /* ViewController.swift */,
 				2E877FC421C9355300E76CE3 /* Main.storyboard */,
 				2E877FC721C9355400E76CE3 /* Assets.xcassets */,
 				2E877FC921C9355400E76CE3 /* LaunchScreen.storyboard */,
 				2E877FCC21C9355400E76CE3 /* Info.plist */,
+				2E9FB76C21EE192C00AD2078 /* POIwork.swift */,
+				2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */,
 			);
 			path = ARG;
 			sourceTree = "<group>";
@@ -248,7 +265,10 @@
 			files = (
 				2E877FCB21C9355400E76CE3 /* LaunchScreen.storyboard in Resources */,
 				2E877FC821C9355400E76CE3 /* Assets.xcassets in Resources */,
+				2E9FB77421EE6EED00AD2078 /* PublicPOI_en.json in Resources */,
+				2E9FB77521EE6EED00AD2078 /* PublicPOI_rus.json in Resources */,
 				2E877FC621C9355300E76CE3 /* Main.storyboard in Resources */,
+				2E9FB77621EE6EED00AD2078 /* PublicPOI_tat.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E877FC321C9355300E76CE3 /* ViewController.swift in Sources */,
+				2E9FB76D21EE192C00AD2078 /* POIwork.swift in Sources */,
 				2E877FC121C9355300E76CE3 /* AppDelegate.swift in Sources */,
+				2E2E929121F4CC3E00717F0A /* RoutePopupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +336,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2E877FC521C9355300E76CE3 /* Base */,
+				2E9FB76E21EE68CC00AD2078 /* tt-RU */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -322,6 +345,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2E877FCA21C9355400E76CE3 /* Base */,
+				2E9FB76F21EE68CC00AD2078 /* tt-RU */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -333,6 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -394,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
