@@ -137,7 +137,7 @@
         <!--Route Popup View Controller-->
         <scene sceneID="cZw-ZT-9qC">
             <objects>
-                <viewController id="HnY-T1-NTG" customClass="RoutePopupViewController" customModule="ARG" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="HnY-T1-NTG" customClass="RoutePopupViewController" customModule="ARG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XlO-Sq-NTF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,9 +155,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GyG-6X-NgW">
-                                        <rect key="frame" x="127" y="291" width="34" height="30"/>
+                                        <rect key="frame" x="103" y="291" width="83" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <state key="normal" title="Save"/>
+                                        <state key="normal" title="Select route"/>
                                         <connections>
                                             <action selector="selectRoute_TouchUpInside:" destination="HnY-T1-NTG" eventType="touchUpInside" id="M7H-sE-xWh"/>
                                         </connections>
@@ -166,6 +166,41 @@
                                         <rect key="frame" x="8" y="45" width="272" height="238"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RouteCell" id="C6I-DS-ea1" customClass="RouteCell" customModule="ARG" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="272" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C6I-DS-ea1" id="8IP-N6-eU1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="272" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KLQ-8J-anM">
+                                                            <rect key="frame" x="3" y="0.0" width="44" height="44"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Цветаева" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO1-dr-dAE">
+                                                            <rect key="frame" x="55" y="0.0" width="217" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Экскурсия по Цветаевыским местам" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yr-XT-lC5">
+                                                            <rect key="frame" x="55" y="22" width="217" height="14"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="descriptionView" destination="8yr-XT-lC5" id="5pG-Mg-Y2o"/>
+                                                    <outlet property="routeImageView" destination="KLQ-8J-anM" id="3Ax-lq-L5V"/>
+                                                    <outlet property="titleView" destination="xO1-dr-dAE" id="6lK-iG-2x1"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,7 +210,9 @@
                         <viewLayoutGuide key="safeArea" id="Mx6-oK-XLj"/>
                     </view>
                     <connections>
+                        <outlet property="routeList" destination="E1g-uv-YnU" id="Nr8-gC-dKt"/>
                         <outlet property="selectRoute" destination="GyG-6X-NgW" id="HGa-v7-LIn"/>
+                        <outlet property="tableView" destination="E1g-uv-YnU" id="Akd-TG-pxj"/>
                         <outlet property="titleLabel" destination="KSz-iG-dcw" id="lBe-1R-idc"/>
                     </connections>
                 </viewController>

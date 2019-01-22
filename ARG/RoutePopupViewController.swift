@@ -9,16 +9,54 @@
 import UIKit
 
 class RoutePopupViewController: UIViewController {
-
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var selectRoute: UIButton!
+    @IBOutlet weak var routeList: UITableView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    var routes: [Route] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
 
+        routes = createRoutes()
+
+        tableView.delegate = self
+        tableView.dataSource = self
+}
+
+    func createRoutes() -> [Route]{
+        var tmp: [Route] = []
+        
+        let image_1: UIImage! = UIImage(named: "ГЛАВНАЯ активная")
+        let image_2: UIImage! = UIImage(named: "ГЛАВНАЯ активная")
+        let image_3: UIImage! = UIImage(named: "ГЛАВНАЯ активная")
+
+        let route_1 = Route(title: "Цветаева", image: image_1, description: "Экскурсия по местам М. Цветаевой")
+        let route_2 = Route(title: "Цветаева", image: image_2, description: "Экскурсия по местам М. Цветаевой")
+        let route_3 = Route(title: "Цветаева", image: image_3, description: "Экскурсия по местам М. Цветаевой")
+    
+        tmp += [route_1, route_2, route_3]
+        
+        return tmp
+    }
+    
     @IBAction func selectRoute_TouchUpInside(_ sender: UIButton) {
         dismiss(animated: true)
     }
+}
+
+extension RoutePopupViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return routes.count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let route = routes[0]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RouteCell") as! RouteCell
+        cell.setRoute(route: route)
+            
+        return cell
+    }
 }
