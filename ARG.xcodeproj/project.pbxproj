@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E023B2021FD87A100B3D8AC /* ARScineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E023B1F21FD87A100B3D8AC /* ARScineViewController.swift */; };
+		2E023B2221FDDD2200B3D8AC /* ImageInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E023B2121FDDD2200B3D8AC /* ImageInformationViewController.swift */; };
+		2E023B2421FDE17800B3D8AC /* DTOImageInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E023B2321FDE17800B3D8AC /* DTOImageInformation.swift */; };
+		2E023B2621FE311800B3D8AC /* ViewControllerARSCNDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E023B2521FE311800B3D8AC /* ViewControllerARSCNDelegate.swift */; };
 		2E1B341121F74493001149BC /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B341021F74493001149BC /* Route.swift */; };
 		2E1B341321F74CE0001149BC /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B341221F74CE0001149BC /* RouteCell.swift */; };
 		2E2E929121F4CC3E00717F0A /* RoutePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */; };
@@ -42,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E023B1F21FD87A100B3D8AC /* ARScineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARScineViewController.swift; sourceTree = "<group>"; };
+		2E023B2121FDDD2200B3D8AC /* ImageInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageInformationViewController.swift; sourceTree = "<group>"; };
+		2E023B2321FDE17800B3D8AC /* DTOImageInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOImageInformation.swift; sourceTree = "<group>"; };
+		2E023B2521FE311800B3D8AC /* ViewControllerARSCNDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerARSCNDelegate.swift; sourceTree = "<group>"; };
 		2E1B341021F74493001149BC /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		2E1B341221F74CE0001149BC /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePopupViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +138,10 @@
 				2E9FB76C21EE192C00AD2078 /* POIwork.swift */,
 				2E1B341221F74CE0001149BC /* RouteCell.swift */,
 				2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */,
+				2E023B1F21FD87A100B3D8AC /* ARScineViewController.swift */,
+				2E023B2121FDDD2200B3D8AC /* ImageInformationViewController.swift */,
+				2E023B2321FDE17800B3D8AC /* DTOImageInformation.swift */,
+				2E023B2521FE311800B3D8AC /* ViewControllerARSCNDelegate.swift */,
 			);
 			path = ARG;
 			sourceTree = "<group>";
@@ -300,11 +312,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E877FC321C9355300E76CE3 /* ViewController.swift in Sources */,
+				2E023B2621FE311800B3D8AC /* ViewControllerARSCNDelegate.swift in Sources */,
 				2E9FB76D21EE192C00AD2078 /* POIwork.swift in Sources */,
 				2E877FC121C9355300E76CE3 /* AppDelegate.swift in Sources */,
+				2E023B2021FD87A100B3D8AC /* ARScineViewController.swift in Sources */,
 				2E1B341121F74493001149BC /* Route.swift in Sources */,
 				2E2E929121F4CC3E00717F0A /* RoutePopupViewController.swift in Sources */,
 				2E1B341321F74CE0001149BC /* RouteCell.swift in Sources */,
+				2E023B2421FDE17800B3D8AC /* DTOImageInformation.swift in Sources */,
+				2E023B2221FDDD2200B3D8AC /* ImageInformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
