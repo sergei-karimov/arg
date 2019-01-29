@@ -248,15 +248,18 @@
                                     <action selector="exitTouchUpInside:" destination="qql-t3-PPh" eventType="touchUpInside" id="roO-OB-kgD"/>
                                 </connections>
                             </button>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ai-ti-peQ">
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Ai-ti-peQ">
                                 <rect key="frame" x="16" y="20" width="288" height="494"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mwr-Zm-1CR" firstAttribute="leading" secondItem="MWM-EE-hXV" secondAttribute="leading" id="0ra-GC-PUc"/>
+                            <constraint firstAttribute="trailing" secondItem="1Ai-ti-peQ" secondAttribute="trailing" id="48s-sF-rcT"/>
+                            <constraint firstItem="Mwr-Zm-1CR" firstAttribute="top" secondItem="1Ai-ti-peQ" secondAttribute="bottom" constant="8" id="B4t-8E-vkV"/>
                             <constraint firstItem="MWM-EE-hXV" firstAttribute="bottom" secondItem="Mwr-Zm-1CR" secondAttribute="bottom" constant="16" id="WJO-EK-Jbw"/>
+                            <constraint firstItem="1Ai-ti-peQ" firstAttribute="top" secondItem="MWM-EE-hXV" secondAttribute="top" id="Xpk-VE-4pV"/>
+                            <constraint firstItem="1Ai-ti-peQ" firstAttribute="leading" secondItem="MWM-EE-hXV" secondAttribute="leading" id="o7R-im-lgU"/>
                             <constraint firstItem="Mwr-Zm-1CR" firstAttribute="trailing" secondItem="MWM-EE-hXV" secondAttribute="trailing" id="sMT-Cw-7Cp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MWM-EE-hXV"/>
