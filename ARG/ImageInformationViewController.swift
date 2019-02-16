@@ -20,9 +20,9 @@ class ImageInformationViewController: UIViewController {
         super.viewDidLoad()
 
         if let actualImageInformation = imageInformation {
-            self.imageLabel.text = actualImageInformation.name
+//            self.imageLabel.text = actualImageInformation.name
             self.imageView.image = actualImageInformation.image
-            self.imageDescription.text = actualImageInformation.description
+//            self.imageDescription.text = actualImageInformation.description
         }
     }
     

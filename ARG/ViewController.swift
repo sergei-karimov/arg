@@ -84,7 +84,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     func loadInitialData() {
-        guard let fileName = Bundle.main.path(forResource: "PublicPOI_rus", ofType: "json") else { return }
+        guard let fileName = Bundle.main.path(forResource: "PublicPOI_tat", ofType: "json") else { return }
         let optionalData = try? Data(contentsOf: URL(fileURLWithPath: fileName))
 
         guard let data = optionalData else { return }
