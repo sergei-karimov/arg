@@ -263,6 +263,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"tt-RU",
 			);
 			mainGroup = 2E877FB421C9355300E76CE3;
 			productRefGroup = 2E877FBE21C9355300E76CE3 /* Products */;

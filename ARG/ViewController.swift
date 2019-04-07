@@ -8,10 +8,12 @@
 
 import UIKit
 import MapKit
+import CoreLocation
+import UserNotifications
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate {
+class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationManagerDelegate {
 
-    let locationManager = CLLocationManager()
+    var locationManager:CLLocationManager!
     var location: CLLocation!
     
 //    @IBOutlet weak var plusBtnClicked: UITapGestureRecognize!
@@ -19,6 +21,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var excurtionImgBtn: UIImageView!
     @IBOutlet weak var myRouteImgBtn: UIImageView!
     @IBOutlet weak var cabnetImgBtn: UIImageView!
+    @IBOutlet weak var objectsBtnShowHideBtn: UIButton!
+    @IBOutlet weak var objectsBtn: UIButton!
     
     var spanDelta = 0.77
     
@@ -54,13 +58,53 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         
         mapView.delegate = self
-        let initialLocation = CLLocation(latitude: 55.795183, longitude: 48.793128)
-        centerMapOnLocation(location: initialLocation)
+        determineMyCurrentLocation()
+        
+//        centerMapOnLocation(location: initialLocation)
 
         loadInitialData()
         mapView.addAnnotations(poiworks)
         
         showImHere(mapView)
+    }
+    
+    func determineMyCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+            //locationManager.startUpdatingHeading()
+        }
+    }
+    
+    private func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+//        let lastDelta = mapView.region.span
+        // Call stopUpdatingLocation() to stop listening for location updates,
+        // other wise this function will be called every time when user location changes.
+        
+        // manager.stopUpdatingLocation()
+        
+        print("user latitude = \(userLocation.coordinate.latitude)")
+        print("user longitude = \(userLocation.coordinate.longitude)")
+        
+//        centerMapOnLocation(location: userLocation)
+//        var center = CLLocationCoordinate2D(latitude: 55.795183, longitude: 48.793128)
+//
+//        center.latitude = userLocation.coordinate.latitude
+//        center.longitude = userLocation.coordinate.longitude
+//
+//        let span = MKCoordinateSpan(latitudeDelta: lastDelta.latitudeDelta, longitudeDelta: lastDelta.longitudeDelta)
+//        let region = MKCoordinateRegion(center: center, span: span)
+//        mapView.setRegion(region, animated: true)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("Error \(error)")
     }
     
     func onSave(_ data: String) -> () {
@@ -145,9 +189,9 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         self.mapView.showAnnotations(annotations, animated: true )
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        self.location = locations.last
-    }
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//        self.location = locations.last
+//    }
     
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
@@ -164,7 +208,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         center.latitude = mapView.userLocation.coordinate.latitude 
         center.longitude = mapView.userLocation.coordinate.longitude
         
-        let span = MKCoordinateSpan(latitudeDelta: lastDelta.latitudeDelta, longitudeDelta: lastDelta.longitudeDelta)
+        //let span = MKCoordinateSpan(latitudeDelta: lastDelta.latitudeDelta, longitudeDelta: lastDelta.longitudeDelta)
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion(center: center, span: span)
         mapView.setRegion(region, animated: true)
     }
@@ -202,7 +247,16 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         self.mapView.setRegion(region, animated: true)
     }
     
+    @IBAction func showHideObjectsTouchUpInside(_ sender: UIButton) {
+        if !objectsBtn.isHidden {
+            objectsBtn.isHidden = true
+        }else{
+            objectsBtn.isHidden = false
+        }
+    }
+    
     @IBAction func MapIAmHere(_ sender: Any) {
+//        determineMyCurrentLocation()
         showImHere(self.mapView)
     }
 }

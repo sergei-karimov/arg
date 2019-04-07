@@ -132,6 +132,9 @@
                                     <constraint firstAttribute="width" constant="45" id="QLG-wO-JQ7"/>
                                 </constraints>
                                 <state key="normal" image="Builds_active"/>
+                                <connections>
+                                    <action selector="showHideObjectsTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6YI-O3-5Fd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -157,6 +160,8 @@
                     <navigationItem key="navigationItem" title="Карта" id="pPr-VF-Mrj"/>
                     <connections>
                         <outlet property="mapView" destination="2dR-Be-eLS" id="p5Z-UY-M3L"/>
+                        <outlet property="objectsBtn" destination="AHc-4K-phg" id="Ltw-0T-vk0"/>
+                        <outlet property="objectsBtnShowHideBtn" destination="gU9-eZ-wXP" id="piv-dZ-IFU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

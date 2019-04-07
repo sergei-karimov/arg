@@ -45,9 +45,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>The app is requesting permission to view your current location</string>
 	<key>CFBundleDisplayName</key>
 	<string></string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app wants to use your location</string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>THis app wants to use your location</string>
 </dict>
 </plist>
