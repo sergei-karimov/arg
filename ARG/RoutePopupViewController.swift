@@ -33,7 +33,7 @@ class RoutePopupViewController: UIViewController {
 //        let image_2: UIImage! = UIImage(named: "ГЛАВНАЯ активная")
 //        let image_3: UIImage! = UIImage(named: "ГЛАВНАЯ активная")
 
-        let route_1 = Route(title: "Цветаева", image: image_1, description: "Цветаева урыннары буйлап")
+        let route_1 = Route(title: "Цветаева", image: image_1, description: "Прогулка по Цветаевским местам")
 //        let route_2 = Route(title: "Цветаева_№2", image: image_2, description: "Экскурсия Елабуге")
 //        let route_3 = Route(title: "Цветаева_№3", image: image_3, description: "Обзорная экскурсия")
 

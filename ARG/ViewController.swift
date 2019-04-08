@@ -37,7 +37,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationM
     
     func prepareRoute(poiWorks: [POIwork]) -> [MKMapItem] {
         var res: [MKMapItem] = []
-        for pw in poiworks {
+        for pw in poiWorks {
             let poiPlaceMaker: MKPlacemark = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: pw.coordinate.latitude, longitude: pw.coordinate.longitude))
             let mapItem: MKMapItem = MKMapItem(placemark: poiPlaceMaker)
             res.append(mapItem)
@@ -202,7 +202,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationM
     }
     
     func showImHere(_ mapView: MKMapView) {
-        let lastDelta = mapView.region.span
+//        let lastDelta = mapView.region.span
 
         var center = CLLocationCoordinate2D(latitude: 55.795183, longitude: 48.793128)
         center.latitude = mapView.userLocation.coordinate.latitude 
