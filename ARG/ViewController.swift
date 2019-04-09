@@ -47,6 +47,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationM
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         if segue.identifier == "toRoutePopupViewControllerSegue" {
             let popup = segue.destination as! RoutePopupViewController
             
@@ -56,6 +57,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationM
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.register(ExcursionMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
         mapView.delegate = self
         determineMyCurrentLocation()
@@ -128,7 +131,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationM
     }
     
     func loadInitialData() {
-        guard let fileName = Bundle.main.path(forResource: "PublicPOI_tat", ofType: "json") else { return }
+        guard let fileName = Bundle.main.path(forResource: "PublicPOI_rus", ofType: "json") else { return }
         let optionalData = try? Data(contentsOf: URL(fileURLWithPath: fileName))
 
         guard let data = optionalData else { return }
@@ -264,7 +267,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationM
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard let annotation = annotation as? POIwork else { return nil }
-        let identifier = "marker"
+        let identifier = "annotation"
         var view: MKMarkerAnnotationView
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
             as? MKMarkerAnnotationView {

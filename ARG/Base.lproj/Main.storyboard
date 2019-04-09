@@ -38,15 +38,23 @@
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="HnY-T1-NTG" kind="presentation" identifier="toRoutePopupViewControllerSegue" id="KSK-ND-jM4"/>
+                                                    <segue destination="HnY-T1-NTG" kind="presentation" identifier="toRoutePopupViewControllerSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="KSK-ND-jM4"/>
                                                 </connections>
                                             </button>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="МОЙ МАРШРУТ неактивная" translatesAutoresizingMaskIntoConstraints="NO" id="A0u-GU-gP1">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKe-Uj-Nka">
                                                 <rect key="frame" x="198" y="0.0" width="50" height="50"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="КАБИНЕТ неактивная" translatesAutoresizingMaskIntoConstraints="NO" id="QPb-EZ-dfE">
+                                                <state key="normal" image="МОЙ МАРШРУТ неактивная"/>
+                                                <connections>
+                                                    <segue destination="qq1-z5-kRp" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="nPG-aS-pNO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSe-mU-5Ye">
                                                 <rect key="frame" x="297" y="0.0" width="50" height="50"/>
-                                            </imageView>
+                                                <state key="normal" image="КАБИНЕТ неактивная"/>
+                                                <connections>
+                                                    <segue destination="sg5-sP-nuY" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="4QV-NW-yXf"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -104,6 +112,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0H-va-ndI">
                                         <rect key="frame" x="58.333333333333314" y="0.0" width="50" height="48"/>
                                         <state key="normal" image="поиск"/>
+                                        <connections>
+                                            <segue destination="dlc-9u-ZQe" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="BVf-FX-ohh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -128,6 +139,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Карта" id="pPr-VF-Mrj"/>
                     <connections>
+                        <outlet property="mainImgBtn" destination="1Bz-HV-nFf" id="1oQ-z2-Uz3"/>
                         <outlet property="mapView" destination="2dR-Be-eLS" id="p5Z-UY-M3L"/>
                         <outlet property="objectsBtn" destination="AHc-4K-phg" id="Ltw-0T-vk0"/>
                         <outlet property="objectsBtnShowHideBtn" destination="gU9-eZ-wXP" id="piv-dZ-IFU"/>
@@ -152,7 +164,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Выберите маршрут" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSz-iG-dcw">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="37"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.34177953004837036" green="0.63380521535873413" blue="0.70197337865829468" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.33618517415850718" green="0.62915605985847622" blue="0.70197337865829468" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -221,7 +233,71 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1XT-uv-4Cb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1695" y="-569.36619718309862"/>
+            <point key="canvasLocation" x="2438" y="-1216"/>
+        </scene>
+        <!--Excursion View Controller-->
+        <scene sceneID="bk5-a9-zCo">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dO8-0H-HH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="qq1-z5-kRp" customClass="ExcursionViewController" customModule="ARG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xsr-Q6-46a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zPh-z5-ePh">
+                                <rect key="frame" x="16" y="44" width="343" height="649"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bzo-Ha-fSj">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="649"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="мой маршрут_1"/>
+                                        <connections>
+                                            <action selector="ExitButton:" destination="qq1-z5-kRp" eventType="touchUpInside" id="BqX-sQ-b5E"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.79395869006849318" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="MsJ-an-0FO"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3248.8000000000002" y="-703.44827586206895"/>
+        </scene>
+        <!--Find View Controller-->
+        <scene sceneID="7VS-Ho-rVh">
+            <objects>
+                <viewController modalTransitionStyle="partialCurl" modalPresentationStyle="overCurrentContext" id="dlc-9u-ZQe" customClass="FindViewController" customModule="ARG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uE6-At-8Dv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1fC-3P-FTa">
+                                <rect key="frame" x="16" y="44" width="343" height="649"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mL-jq-hel">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="649"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="поиск_4"/>
+                                        <connections>
+                                            <action selector="ExitButton:" destination="dlc-9u-ZQe" eventType="touchUpInside" id="MIx-6v-oH8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.78882170376712324" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="v4C-sU-UZX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OM4-8a-WG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1693.5999999999999" y="-1215.5172413793105"/>
         </scene>
         <!--Scine View Controller-->
         <scene sceneID="MLo-cP-WOh">
@@ -255,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4b-75-M4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703.2" y="234.23645320197045"/>
+            <point key="canvasLocation" x="1679" y="174"/>
         </scene>
         <!--Image Information View Controller-->
         <scene sceneID="0e7-1z-ItO">
@@ -295,7 +371,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOw-ND-lSC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440.8000000000002" y="233.43328335832086"/>
+            <point key="canvasLocation" x="2439" y="174"/>
+        </scene>
+        <!--Account View Controller-->
+        <scene sceneID="KZp-PZ-65P">
+            <objects>
+                <viewController id="sg5-sP-nuY" customClass="AccountViewController" customModule="ARG" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ics-pT-qu5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LxW-2Q-UiL">
+                                <rect key="frame" x="16" y="44" width="343" height="649"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6g-Uq-4f2">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="649"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="экскурсии2"/>
+                                        <connections>
+                                            <action selector="ExitButton:" destination="sg5-sP-nuY" eventType="touchUpInside" id="gga-0D-pNe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.7752300941780822" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="UhE-bf-WXa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhD-Cn-BdR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3258.4000000000001" y="-32.512315270935964"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="f25-n2-bQ6">
@@ -323,9 +431,12 @@
         <image name="МОЙ МАРШРУТ неактивная" width="50" height="50"/>
         <image name="ЭКСКУРСИИ - неактивная" width="50" height="50"/>
         <image name="минус" width="50" height="50"/>
+        <image name="мой маршрут_1" width="1124" height="2256"/>
         <image name="плюс" width="50" height="50"/>
         <image name="поиск" width="50" height="48"/>
+        <image name="поиск_4" width="1125" height="2255"/>
         <image name="распознать объект" width="150" height="150"/>
+        <image name="экскурсии2" width="1125" height="2436"/>
         <image name="я здесь" width="40" height="57"/>
     </resources>
 </document>
