@@ -29,7 +29,7 @@ class RoutePopupViewController: UIViewController {
     func createRoutes() -> [Route]{
         var tmp: [Route] = []
         
-        let image_1: UIImage! = UIImage(named: "ГЛАВНАЯ активная")
+        let image_1: UIImage! = UIImage(named: "n_main-active")
 //        let image_2: UIImage! = UIImage(named: "ГЛАВНАЯ активная")
 //        let image_3: UIImage! = UIImage(named: "ГЛАВНАЯ активная")
 

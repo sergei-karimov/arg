@@ -22,24 +22,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-I9-0m3">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-I9-0m3">
                                 <rect key="frame" x="6" y="706" width="363" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Va0-Dy-oYc">
-                                        <rect key="frame" x="8" y="8" width="166" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Va0-Dy-oYc">
+                                        <rect key="frame" x="8" y="3" width="347" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n_main-active" translatesAutoresizingMaskIntoConstraints="NO" id="1Bz-HV-nFf">
-                                                <rect key="frame" x="0.0" y="0.0" width="16" height="50"/>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww7-Cy-jTd" userLabel="tours">
-                                                <rect key="frame" x="50" y="0.0" width="16" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="WX1-W0-1OV"/>
+                                                    <constraint firstAttribute="height" constant="50" id="YQg-36-KDk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww7-Cy-jTd" userLabel="tours">
+                                                <rect key="frame" x="99" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="gKy-fa-AT8"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                                <state key="normal" image="Layer 1">
+                                                <state key="normal" image="n_marsh">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
@@ -47,14 +48,21 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKe-Uj-Nka">
-                                                <rect key="frame" x="100" y="0.0" width="16" height="50"/>
+                                                <rect key="frame" x="198" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="4q7-Qh-Tqo"/>
+                                                </constraints>
                                                 <state key="normal" image="n_marsh"/>
                                                 <connections>
                                                     <action selector="myRoute_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="luR-lK-WFC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSe-mU-5Ye">
-                                                <rect key="frame" x="150" y="0.0" width="16" height="50"/>
+                                                <rect key="frame" x="297" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Voc-Nw-b03"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Yrd-68-Djs"/>
+                                                </constraints>
                                                 <state key="normal" image="n_kab"/>
                                                 <connections>
                                                     <action selector="kabinet_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rTS-Ih-1TE"/>
@@ -64,38 +72,45 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Va0-Dy-oYc" firstAttribute="leading" secondItem="Wbg-I9-0m3" secondAttribute="leading" constant="8" id="4bG-cW-EeP"/>
+                                    <constraint firstAttribute="trailing" secondItem="Va0-Dy-oYc" secondAttribute="trailing" constant="8" id="Ggv-77-Hd7"/>
+                                    <constraint firstItem="Va0-Dy-oYc" firstAttribute="top" secondItem="Wbg-I9-0m3" secondAttribute="top" constant="3" id="UmN-Fb-oBH"/>
+                                    <constraint firstAttribute="height" constant="66" id="p6p-OA-UBq"/>
+                                </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="wog-b1-Jcg">
-                                <rect key="frame" x="308" y="313" width="16" height="132"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="wog-b1-Jcg">
+                                <rect key="frame" x="316" y="298" width="51" height="216"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWS-FV-Vre">
-                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
                                         <state key="normal" image="n_plus"/>
                                         <connections>
                                             <action selector="MapPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3OZ-FJ-cQh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS6-KS-2Rx">
-                                        <rect key="frame" x="0.0" y="55" width="16" height="22"/>
+                                        <rect key="frame" x="0.0" y="83" width="51" height="50"/>
                                         <state key="normal" image="n_minus"/>
                                         <connections>
                                             <action selector="MapMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8r-mB-05F"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVg-TT-Vm8">
-                                        <rect key="frame" x="0.0" y="110" width="16" height="22"/>
+                                        <rect key="frame" x="0.0" y="166" width="51" height="50"/>
                                         <state key="normal" image="n_arrow"/>
                                         <connections>
                                             <action selector="MapIAmHere:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2NS-d2-u61"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="Ctm-0m-1SY"/>
+                                </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-4K-phg">
-                                <rect key="frame" x="112" y="331" width="151" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="распознать объект">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-4K-phg">
+                                <rect key="frame" x="112.66666666666669" y="331" width="150" height="150"/>
+                                <state key="normal" image="builds">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -103,45 +118,44 @@
                                     <segue destination="qql-t3-PPh" kind="presentation" id="Slw-e1-B5Q"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-Sd-ynd">
-                                <rect key="frame" x="202" y="96" width="51" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-Sd-ynd">
+                                <rect key="frame" x="248" y="96" width="119" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gU9-eZ-wXP">
-                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="48"/>
                                         <state key="normal" image="n_recognize"/>
                                         <connections>
                                             <action selector="showHideObjectsTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6YI-O3-5Fd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0H-va-ndI">
-                                        <rect key="frame" x="35" y="0.0" width="16" height="22"/>
+                                        <rect key="frame" x="69" y="0.0" width="50" height="48"/>
                                         <state key="normal" image="n_search"/>
                                         <connections>
                                             <action selector="search_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSZ-Zu-iKu"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="4hN-zm-gRq"/>
+                                </constraints>
                             </stackView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALx-GU-8sK">
-                                <rect key="frame" x="6" y="88" width="363" height="610"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALx-GU-8sK">
+                                <rect key="frame" x="6" y="88" width="363" height="612"/>
                                 <state key="normal" backgroundImage="мой маршрут_3"/>
                                 <connections>
                                     <action selector="myRouteWindowTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JRY-ns-QS1"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZH-Xh-ftg">
-                                <rect key="frame" x="6" y="211" width="363" height="487.00000000000045"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZH-Xh-ftg">
+                                <rect key="frame" x="6" y="147" width="363" height="553.00000000000045"/>
                                 <state key="normal" backgroundImage="кабинет"/>
                                 <connections>
                                     <action selector="cabinetWindowTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMz-mv-JbK"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8c-OS-N7T">
-                                <rect key="frame" x="6" y="88" width="363" height="610"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8c-OS-N7T">
+                                <rect key="frame" x="6" y="88" width="363" height="612"/>
                                 <state key="normal" backgroundImage="поиск_5"/>
                                 <connections>
                                     <action selector="searchWindowTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rac-Il-4Ek"/>
@@ -149,6 +163,30 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wbg-I9-0m3" secondAttribute="bottom" constant="6" id="4ti-KB-S1o"/>
+                            <constraint firstItem="Wbg-I9-0m3" firstAttribute="top" secondItem="ALx-GU-8sK" secondAttribute="bottom" constant="6" id="5OH-rg-Nb0"/>
+                            <constraint firstItem="Wbg-I9-0m3" firstAttribute="top" secondItem="iZH-Xh-ftg" secondAttribute="bottom" constant="6" id="5Op-Sf-iCb"/>
+                            <constraint firstItem="ALx-GU-8sK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7cS-B0-Eii"/>
+                            <constraint firstItem="wog-b1-Jcg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ALL-z0-Ngw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N8c-OS-N7T" secondAttribute="trailing" constant="6" id="CL3-hV-nex"/>
+                            <constraint firstItem="iZH-Xh-ftg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="59" id="FYS-Wd-p1P"/>
+                            <constraint firstItem="N8c-OS-N7T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Idc-QH-d9I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iZH-Xh-ftg" secondAttribute="trailing" constant="6" id="MlP-b7-bGS"/>
+                            <constraint firstAttribute="trailing" secondItem="Wbg-I9-0m3" secondAttribute="trailing" constant="6" id="U2d-nx-vd6"/>
+                            <constraint firstItem="iZH-Xh-ftg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="Yec-8U-OEb"/>
+                            <constraint firstItem="Wbg-I9-0m3" firstAttribute="top" secondItem="N8c-OS-N7T" secondAttribute="bottom" constant="6" id="cNd-OI-CsQ"/>
+                            <constraint firstItem="AHc-4K-phg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cXf-F1-LXZ"/>
+                            <constraint firstItem="Wbg-I9-0m3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="fTM-4H-T03"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wog-b1-Jcg" secondAttribute="trailing" constant="8" id="goL-Fq-fNH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LXY-Sd-ynd" secondAttribute="trailing" constant="8" id="i6V-Sp-OhQ"/>
+                            <constraint firstItem="ALx-GU-8sK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="iTC-Jl-gIU"/>
+                            <constraint firstItem="N8c-OS-N7T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="ltB-cm-Mju"/>
+                            <constraint firstItem="AHc-4K-phg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mR3-Jz-ghm"/>
+                            <constraint firstItem="N8c-OS-N7T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tYB-6O-Lc1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ALx-GU-8sK" secondAttribute="trailing" constant="6" id="xfz-IV-Mvr"/>
+                            <constraint firstItem="LXY-Sd-ynd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="zfk-S7-EcY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Карта" id="pPr-VF-Mrj"/>
@@ -168,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904.79999999999995" y="-569.70443349753702"/>
+            <point key="canvasLocation" x="903.75" y="-570.42253521126759"/>
         </scene>
         <!--Route Popup View Controller-->
         <scene sceneID="cZw-ZT-9qC">
@@ -443,20 +481,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Layer 1" width="50" height="48"/>
-        <image name="n_arrow" width="61" height="61"/>
+        <image name="builds" width="150" height="150"/>
+        <image name="n_arrow" width="50" height="50"/>
         <image name="n_kab" width="31" height="50"/>
-        <image name="n_main-active" width="61" height="58"/>
-        <image name="n_marsh" width="56" height="50"/>
-        <image name="n_minus" width="61" height="61"/>
-        <image name="n_plus" width="61" height="61"/>
-        <image name="n_recognize" width="74" height="71"/>
-        <image name="n_search" width="74" height="71"/>
+        <image name="n_main-active" width="50" height="47.666667938232422"/>
+        <image name="n_marsh" width="50" height="44.666667938232422"/>
+        <image name="n_minus" width="50" height="50"/>
+        <image name="n_plus" width="50" height="50"/>
+        <image name="n_recognize" width="50" height="48"/>
+        <image name="n_search" width="50" height="48"/>
         <image name="кабинет" width="1125" height="1541"/>
         <image name="мой маршрут_1" width="1124" height="2256"/>
         <image name="мой маршрут_3" width="1125" height="1884"/>
         <image name="поиск_4" width="1125" height="2255"/>
         <image name="поиск_5" width="1125" height="2043"/>
-        <image name="распознать объект" width="150" height="150"/>
     </resources>
 </document>
