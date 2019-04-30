@@ -18,23 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dR-Be-eLS">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dR-Be-eLS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-I9-0m3">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-I9-0m3">
                                 <rect key="frame" x="6" y="706" width="363" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillProportionally" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="Va0-Dy-oYc">
-                                        <rect key="frame" x="8" y="8" width="347" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Va0-Dy-oYc">
+                                        <rect key="frame" x="8" y="8" width="166" height="50"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ГЛАВНАЯ активная" translatesAutoresizingMaskIntoConstraints="NO" id="1Bz-HV-nFf">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n_main-active" translatesAutoresizingMaskIntoConstraints="NO" id="1Bz-HV-nFf">
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="50"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww7-Cy-jTd" userLabel="tours">
-                                                <rect key="frame" x="99" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="50" y="0.0" width="16" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="WX1-W0-1OV"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                                <state key="normal" image="ЭКСКУРСИИ - неактивная">
+                                                <state key="normal" image="Layer 1">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
                                                 <connections>
@@ -42,55 +47,54 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKe-Uj-Nka">
-                                                <rect key="frame" x="198" y="0.0" width="50" height="50"/>
-                                                <state key="normal" image="МОЙ МАРШРУТ неактивная"/>
+                                                <rect key="frame" x="100" y="0.0" width="16" height="50"/>
+                                                <state key="normal" image="n_marsh"/>
                                                 <connections>
-                                                    <segue destination="qq1-z5-kRp" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="nPG-aS-pNO"/>
+                                                    <action selector="myRoute_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="luR-lK-WFC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aSe-mU-5Ye">
-                                                <rect key="frame" x="297" y="0.0" width="50" height="50"/>
-                                                <state key="normal" image="КАБИНЕТ неактивная"/>
+                                                <rect key="frame" x="150" y="0.0" width="16" height="50"/>
+                                                <state key="normal" image="n_kab"/>
                                                 <connections>
-                                                    <segue destination="sg5-sP-nuY" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="4QV-NW-yXf"/>
+                                                    <action selector="kabinet_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rTS-Ih-1TE"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="9ei-z3-FBr"/>
-                                </constraints>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wog-b1-Jcg">
-                                <rect key="frame" x="317" y="312.66666666666669" width="50" height="187"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="wog-b1-Jcg">
+                                <rect key="frame" x="308" y="313" width="16" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWS-FV-Vre">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <state key="normal" image="плюс"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWS-FV-Vre">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
+                                        <state key="normal" image="n_plus"/>
                                         <connections>
                                             <action selector="MapPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3OZ-FJ-cQh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS6-KS-2Rx">
-                                        <rect key="frame" x="0.0" y="65" width="50" height="50"/>
-                                        <state key="normal" image="минус"/>
+                                        <rect key="frame" x="0.0" y="55" width="16" height="22"/>
+                                        <state key="normal" image="n_minus"/>
                                         <connections>
                                             <action selector="MapMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8r-mB-05F"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVg-TT-Vm8">
-                                        <rect key="frame" x="0.0" y="130" width="50" height="57"/>
-                                        <state key="normal" image="я здесь"/>
+                                        <rect key="frame" x="0.0" y="110" width="16" height="22"/>
+                                        <state key="normal" image="n_arrow"/>
                                         <connections>
                                             <action selector="MapIAmHere:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2NS-d2-u61"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-4K-phg">
-                                <rect key="frame" x="112.66666666666669" y="331" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-4K-phg">
+                                <rect key="frame" x="112" y="331" width="151" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="распознать объект">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
@@ -99,50 +103,67 @@
                                     <segue destination="qql-t3-PPh" kind="presentation" id="Slw-e1-B5Q"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-Sd-ynd">
-                                <rect key="frame" x="258.66666666666669" y="96" width="108.33333333333331" height="48"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-Sd-ynd">
+                                <rect key="frame" x="202" y="96" width="51" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gU9-eZ-wXP">
-                                        <rect key="frame" x="0.0" y="0.0" width="49.333333333333336" height="48"/>
-                                        <state key="normal" image="Builds_active"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="22"/>
+                                        <state key="normal" image="n_recognize"/>
                                         <connections>
                                             <action selector="showHideObjectsTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6YI-O3-5Fd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0H-va-ndI">
-                                        <rect key="frame" x="58.333333333333314" y="0.0" width="50" height="48"/>
-                                        <state key="normal" image="поиск"/>
+                                        <rect key="frame" x="35" y="0.0" width="16" height="22"/>
+                                        <state key="normal" image="n_search"/>
                                         <connections>
-                                            <segue destination="dlc-9u-ZQe" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="BVf-FX-ohh"/>
+                                            <action selector="search_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSZ-Zu-iKu"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALx-GU-8sK">
+                                <rect key="frame" x="6" y="88" width="363" height="610"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="мой маршрут_3"/>
+                                <connections>
+                                    <action selector="myRouteWindowTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JRY-ns-QS1"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZH-Xh-ftg">
+                                <rect key="frame" x="6" y="211" width="363" height="487.00000000000045"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="кабинет"/>
+                                <connections>
+                                    <action selector="cabinetWindowTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMz-mv-JbK"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N8c-OS-N7T">
+                                <rect key="frame" x="6" y="88" width="363" height="610"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="поиск_5"/>
+                                <connections>
+                                    <action selector="searchWindowTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rac-Il-4Ek"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="wog-b1-Jcg" secondAttribute="trailing" constant="8" id="5Ws-C1-JTZ"/>
-                            <constraint firstItem="Wbg-I9-0m3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bwq-sx-y4W"/>
-                            <constraint firstItem="2dR-Be-eLS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CX7-yZ-ymW"/>
-                            <constraint firstItem="wog-b1-Jcg" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D85-uv-tmz"/>
-                            <constraint firstItem="Wbg-I9-0m3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="Hq2-ld-5ey"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LXY-Sd-ynd" secondAttribute="trailing" constant="8" id="Rgy-rB-Pr6"/>
-                            <constraint firstItem="2dR-Be-eLS" firstAttribute="centerY" secondItem="AHc-4K-phg" secondAttribute="centerY" id="Tqw-0p-kBM"/>
-                            <constraint firstItem="Wbg-I9-0m3" firstAttribute="centerX" secondItem="AHc-4K-phg" secondAttribute="centerX" id="URb-0M-dUk"/>
-                            <constraint firstItem="2dR-Be-eLS" firstAttribute="centerY" secondItem="wog-b1-Jcg" secondAttribute="centerY" id="asG-xm-egZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wbg-I9-0m3" secondAttribute="bottom" constant="6" id="crh-w7-a5V"/>
-                            <constraint firstItem="2dR-Be-eLS" firstAttribute="centerX" secondItem="AHc-4K-phg" secondAttribute="centerX" id="ftw-xO-8MW"/>
-                            <constraint firstItem="LXY-Sd-ynd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="fxi-Am-Ak2"/>
-                            <constraint firstItem="2dR-Be-eLS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qdZ-Nt-2zw"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Карта" id="pPr-VF-Mrj"/>
                     <connections>
+                        <outlet property="cabinetButton" destination="iZH-Xh-ftg" id="B9m-mx-aby"/>
+                        <outlet property="cabinetImgBtn" destination="aSe-mU-5Ye" id="0kj-at-Mdc"/>
+                        <outlet property="excursionImgBtn" destination="Ww7-Cy-jTd" id="CIX-Uu-0mB"/>
+                        <outlet property="findButton" destination="N8c-OS-N7T" id="q9x-DD-21s"/>
                         <outlet property="mainImgBtn" destination="1Bz-HV-nFf" id="1oQ-z2-Uz3"/>
                         <outlet property="mapView" destination="2dR-Be-eLS" id="p5Z-UY-M3L"/>
+                        <outlet property="myRouteButton" destination="ALx-GU-8sK" id="ArK-SL-GdH"/>
+                        <outlet property="myRouteImgBtn" destination="eKe-Uj-Nka" id="bHg-tN-mCi"/>
                         <outlet property="objectsBtn" destination="AHc-4K-phg" id="Ltw-0T-vk0"/>
                         <outlet property="objectsBtnShowHideBtn" destination="gU9-eZ-wXP" id="piv-dZ-IFU"/>
+                        <outlet property="searchButton" destination="B0H-va-ndI" id="t4o-Da-fi0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -238,7 +259,6 @@
         <!--Excursion View Controller-->
         <scene sceneID="bk5-a9-zCo">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dO8-0H-HH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qq1-z5-kRp" customClass="ExcursionViewController" customModule="ARG" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xsr-Q6-46a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -252,9 +272,6 @@
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="649"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="мой маршрут_1"/>
-                                        <connections>
-                                            <action selector="ExitButton:" destination="qq1-z5-kRp" eventType="touchUpInside" id="BqX-sQ-b5E"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -264,6 +281,7 @@
                         <viewLayoutGuide key="safeArea" id="MsJ-an-0FO"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dO8-0H-HH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3248.8000000000002" y="-703.44827586206895"/>
         </scene>
@@ -377,18 +395,18 @@
         <scene sceneID="KZp-PZ-65P">
             <objects>
                 <viewController id="sg5-sP-nuY" customClass="AccountViewController" customModule="ARG" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ics-pT-qu5">
+                    <view key="view" contentMode="scaleAspectFit" id="ics-pT-qu5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LxW-2Q-UiL">
-                                <rect key="frame" x="16" y="44" width="343" height="649"/>
+                                <rect key="frame" x="16" y="249" width="343" height="456"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6g-Uq-4f2">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="649"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6g-Uq-4f2">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="456"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="экскурсии2"/>
+                                        <state key="normal" image="кабинет"/>
                                         <connections>
                                             <action selector="ExitButton:" destination="sg5-sP-nuY" eventType="touchUpInside" id="gga-0D-pNe"/>
                                         </connections>
@@ -397,7 +415,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.5" green="0.5" blue="0.5" alpha="0.7752300941780822" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.58970997431506844" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="UhE-bf-WXa"/>
                     </view>
                 </viewController>
@@ -425,18 +443,20 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Builds_active" width="49.333332061767578" height="47"/>
-        <image name="ГЛАВНАЯ активная" width="50" height="50"/>
-        <image name="КАБИНЕТ неактивная" width="50" height="50"/>
-        <image name="МОЙ МАРШРУТ неактивная" width="50" height="50"/>
-        <image name="ЭКСКУРСИИ - неактивная" width="50" height="50"/>
-        <image name="минус" width="50" height="50"/>
+        <image name="Layer 1" width="50" height="48"/>
+        <image name="n_arrow" width="61" height="61"/>
+        <image name="n_kab" width="31" height="50"/>
+        <image name="n_main-active" width="61" height="58"/>
+        <image name="n_marsh" width="56" height="50"/>
+        <image name="n_minus" width="61" height="61"/>
+        <image name="n_plus" width="61" height="61"/>
+        <image name="n_recognize" width="74" height="71"/>
+        <image name="n_search" width="74" height="71"/>
+        <image name="кабинет" width="1125" height="1541"/>
         <image name="мой маршрут_1" width="1124" height="2256"/>
-        <image name="плюс" width="50" height="50"/>
-        <image name="поиск" width="50" height="48"/>
+        <image name="мой маршрут_3" width="1125" height="1884"/>
         <image name="поиск_4" width="1125" height="2255"/>
+        <image name="поиск_5" width="1125" height="2043"/>
         <image name="распознать объект" width="150" height="150"/>
-        <image name="экскурсии2" width="1125" height="2436"/>
-        <image name="я здесь" width="40" height="57"/>
     </resources>
 </document>

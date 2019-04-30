@@ -15,12 +15,19 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationM
 
     var locationManager:CLLocationManager!
     var location: CLLocation!
+    @IBOutlet weak var cabinetButton: UIButton!
+    @IBOutlet weak var myRouteButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var findButton: UIButton!
     
-//    @IBOutlet weak var plusBtnClicked: UITapGestureRecognize!
+    //    @IBOutlet weak var plusBtnClicked: UITapGestureRecognize!
     @IBOutlet weak var mainImgBtn: UIImageView!
-    @IBOutlet weak var excurtionImgBtn: UIImageView!
-    @IBOutlet weak var myRouteImgBtn: UIImageView!
-    @IBOutlet weak var cabnetImgBtn: UIImageView!
+//    @IBOutlet weak var excurtionImgBtn: UIImageView!
+//    @IBOutlet weak var myRouteImgBtn: UIImageView!
+//    @IBOutlet weak var cabnetImgBtn: UIImageView!
+    @IBOutlet weak var excursionImgBtn: UIButton!
+    @IBOutlet weak var myRouteImgBtn: UIButton!
+    @IBOutlet weak var cabinetImgBtn: UIButton!
     @IBOutlet weak var objectsBtnShowHideBtn: UIButton!
     @IBOutlet weak var objectsBtn: UIButton!
     
@@ -57,6 +64,8 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationM
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        hideAll()
         
         mapView.register(ExcursionMarkerView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         
@@ -261,6 +270,69 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, CLLocationM
     @IBAction func MapIAmHere(_ sender: Any) {
 //        determineMyCurrentLocation()
         showImHere(self.mapView)
+    }
+    
+    func hideAll() {
+        self.cabinetButton.isHidden = true
+        self.myRouteButton.isHidden = true
+        self.findButton.isHidden = true
+    }
+
+    func imgDefault() {
+        self.mainImgBtn.image = UIImage(named: "n_main.png")
+        self.excursionImgBtn.setImage(UIImage(named: "n_excursions.png"), for: .normal)
+        self.myRouteImgBtn.setImage(UIImage(named: "n_marsh.png"), for: .normal)
+        self.cabinetImgBtn.setImage(UIImage(named: "n_kab.png"), for: .normal)
+    }
+    
+    @IBAction func kabinet_TouchUpInside(_ sender: UIButton) {
+        if self.cabinetButton.isHidden {
+            imgDefault()
+            hideAll()
+            self.cabinetImgBtn.setImage(UIImage(named: "n_kab-active.png"), for: .normal)
+            self.cabinetButton.isHidden = false
+        } else{
+            imgDefault()
+            self.mainImgBtn.image = UIImage(named: "n_main-active.png")
+            self.cabinetButton.isHidden = true
+        }
+    }
+    @IBAction func myRoute_TouchUpInside(_ sender: UIButton) {
+        if self.myRouteButton.isHidden {
+            imgDefault()
+            hideAll()
+            self.myRouteImgBtn.setImage(UIImage(named: "n_marsh-active.png"), for: .normal)
+            self.myRouteButton.isHidden = false
+        } else {
+            imgDefault()
+            self.mainImgBtn.image = UIImage(named: "n_main-active.png")
+            self.myRouteButton.isHidden = true
+        }
+    }
+    
+    @IBAction func search_TouchUpInside(_ sender: UIButton) {
+        if self.findButton.isHidden {
+            hideAll()
+            self.findButton.isHidden = false
+        } else {
+            self.findButton.isHidden = true
+        }
+    }
+    
+    @IBAction func cabinetWindowTouchUpInside(_ sender: UIButton) {
+        imgDefault()
+        self.mainImgBtn.image = UIImage(named: "n_main-active.png")
+        self.cabinetButton.isHidden = true
+    }
+    
+    @IBAction func myRouteWindowTouchUpInside(_ sender: UIButton) {
+        imgDefault()
+        self.mainImgBtn.image = UIImage(named: "n_main-active.png")
+        self.myRouteButton.isHidden = true
+    }
+    
+    @IBAction func searchWindowTouchUpInside(_ sender: UIButton) {
+        self.findButton.isHidden = true
     }
 }
 
