@@ -29,13 +29,13 @@
                                         <rect key="frame" x="8" y="3" width="347" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n_main-active" translatesAutoresizingMaskIntoConstraints="NO" id="1Bz-HV-nFf">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="YQg-36-KDk"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww7-Cy-jTd" userLabel="tours">
-                                                <rect key="frame" x="99" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="99" y="0.0" width="16" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="gKy-fa-AT8"/>
                                                 </constraints>
@@ -48,7 +48,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKe-Uj-Nka">
-                                                <rect key="frame" x="198" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="198" y="0.0" width="16" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="4q7-Qh-Tqo"/>
                                                 </constraints>
@@ -80,24 +80,24 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="wog-b1-Jcg">
-                                <rect key="frame" x="316" y="298" width="51" height="216"/>
+                                <rect key="frame" x="316" y="340" width="51" height="132"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWS-FV-Vre">
-                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="22"/>
                                         <state key="normal" image="n_plus"/>
                                         <connections>
                                             <action selector="MapPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3OZ-FJ-cQh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS6-KS-2Rx">
-                                        <rect key="frame" x="0.0" y="83" width="51" height="50"/>
+                                        <rect key="frame" x="0.0" y="55" width="51" height="22"/>
                                         <state key="normal" image="n_minus"/>
                                         <connections>
                                             <action selector="MapMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8r-mB-05F"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVg-TT-Vm8">
-                                        <rect key="frame" x="0.0" y="166" width="51" height="50"/>
+                                        <rect key="frame" x="0.0" y="110" width="51" height="22"/>
                                         <state key="normal" image="n_arrow"/>
                                         <connections>
                                             <action selector="MapIAmHere:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2NS-d2-u61"/>
@@ -109,7 +109,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-4K-phg">
-                                <rect key="frame" x="112.66666666666669" y="331" width="150" height="150"/>
+                                <rect key="frame" x="179.66666666666666" y="395" width="16" height="22"/>
                                 <state key="normal" image="builds">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
@@ -119,17 +119,17 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-Sd-ynd">
-                                <rect key="frame" x="248" y="96" width="119" height="48"/>
+                                <rect key="frame" x="316" y="96" width="51" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gU9-eZ-wXP">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="48"/>
                                         <state key="normal" image="n_recognize"/>
                                         <connections>
                                             <action selector="showHideObjectsTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6YI-O3-5Fd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0H-va-ndI">
-                                        <rect key="frame" x="69" y="0.0" width="50" height="48"/>
+                                        <rect key="frame" x="35" y="0.0" width="16" height="48"/>
                                         <state key="normal" image="n_search"/>
                                         <connections>
                                             <action selector="search_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSZ-Zu-iKu"/>
@@ -148,7 +148,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZH-Xh-ftg">
-                                <rect key="frame" x="6" y="147" width="363" height="553.00000000000045"/>
+                                <rect key="frame" x="6" y="147" width="363" height="553"/>
                                 <state key="normal" backgroundImage="кабинет"/>
                                 <connections>
                                     <action selector="cabinetWindowTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMz-mv-JbK"/>
@@ -375,11 +375,65 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="680"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </arscnView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Идет распознование объекта ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meU-5L-5Aj">
+                                <rect key="frame" x="8" y="69" width="359" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="WQF-nX-Ony"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="N7A-3H-f3v">
+                                <rect key="frame" x="8" y="301" width="51" height="210"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tz-0K-99c">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="51"/>
+                                        <state key="normal" image="info"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCM-Y7-3uz">
+                                        <rect key="frame" x="0.0" y="54" width="51" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2RK-ym-jJe"/>
+                                        </constraints>
+                                        <state key="normal" image="photos"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBF-O9-Mq4">
+                                        <rect key="frame" x="0.0" y="107" width="51" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="itd-SX-JAs"/>
+                                        </constraints>
+                                        <state key="normal" image="night_view"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i73-0R-0MA">
+                                        <rect key="frame" x="0.0" y="160" width="51" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UmE-CR-qaZ"/>
+                                        </constraints>
+                                        <state key="normal" image="history"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="QMT-Xe-plT"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="210" id="mvt-sP-R3E"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="nWD-UA-mRh"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N7A-3H-f3v" firstAttribute="leading" secondItem="MWM-EE-hXV" secondAttribute="leading" constant="8" id="0PO-Qp-dKQ"/>
+                            <constraint firstItem="MWM-EE-hXV" firstAttribute="trailing" secondItem="meU-5L-5Aj" secondAttribute="trailing" constant="8" id="Rxy-X1-7V5"/>
+                            <constraint firstItem="N7A-3H-f3v" firstAttribute="centerY" secondItem="ZrT-wV-NYo" secondAttribute="centerY" id="Spd-Ux-ecR"/>
+                            <constraint firstItem="meU-5L-5Aj" firstAttribute="top" secondItem="MWM-EE-hXV" secondAttribute="top" constant="25" id="f1U-9d-eBb"/>
+                            <constraint firstItem="meU-5L-5Aj" firstAttribute="leading" secondItem="MWM-EE-hXV" secondAttribute="leading" constant="8" id="jYu-00-4SP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="MWM-EE-hXV"/>
                     </view>
                     <connections>
+                        <outlet property="arSceneButtonsStackView" destination="N7A-3H-f3v" id="Uin-fN-eb4"/>
+                        <outlet property="buildingNameLabel" destination="meU-5L-5Aj" id="IuT-15-1cz"/>
                         <outlet property="exit" destination="Mwr-Zm-1CR" id="oSk-rV-0t3"/>
                         <outlet property="sceneView" destination="1Ai-ti-peQ" id="Zj0-WW-BgD"/>
                         <segue destination="wfe-Bg-1zv" kind="presentation" identifier="showImageInformation" id="389-SV-TA8"/>
@@ -387,7 +441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4b-75-M4j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1679" y="174"/>
+            <point key="canvasLocation" x="1677.5999999999999" y="173.64532019704436"/>
         </scene>
         <!--Image Information View Controller-->
         <scene sceneID="0e7-1z-ItO">
@@ -482,6 +536,8 @@
     </scenes>
     <resources>
         <image name="builds" width="150" height="150"/>
+        <image name="history" width="50" height="48"/>
+        <image name="info" width="50" height="48"/>
         <image name="n_arrow" width="50" height="50"/>
         <image name="n_kab" width="31" height="50"/>
         <image name="n_main-active" width="50" height="47.666667938232422"/>
@@ -490,6 +546,8 @@
         <image name="n_plus" width="50" height="50"/>
         <image name="n_recognize" width="50" height="48"/>
         <image name="n_search" width="50" height="48"/>
+        <image name="night_view" width="50" height="48"/>
+        <image name="photos" width="50" height="48"/>
         <image name="кабинет" width="1125" height="1541"/>
         <image name="мой маршрут_1" width="1124" height="2256"/>
         <image name="мой маршрут_3" width="1125" height="1884"/>
