@@ -15,6 +15,7 @@
 		2E1B341321F74CE0001149BC /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B341221F74CE0001149BC /* RouteCell.swift */; };
 		2E2E929121F4CC3E00717F0A /* RoutePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */; };
 		2E350B98225CBEB4008B36AE /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350B97225CBEB4008B36AE /* FindViewController.swift */; };
+		2E62D35C227B6505000FE5F0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62D35B227B6504000FE5F0 /* InfoViewController.swift */; };
 		2E702B15225CCED7000DADCE /* ExcursionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E702B14225CCED7000DADCE /* ExcursionViewController.swift */; };
 		2E702B18225CD4CF000DADCE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E702B17225CD4CF000DADCE /* AccountViewController.swift */; };
 		2E7A0479225C6F8100B00F42 /* ExcursionMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7A0478225C6F8100B00F42 /* ExcursionMarkerView.swift */; };
@@ -58,6 +59,7 @@
 		2E1B341221F74CE0001149BC /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePopupViewController.swift; sourceTree = "<group>"; };
 		2E350B97225CBEB4008B36AE /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		2E62D35B227B6504000FE5F0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		2E702B14225CCED7000DADCE /* ExcursionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionViewController.swift; sourceTree = "<group>"; };
 		2E702B17225CD4CF000DADCE /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		2E7A0478225C6F8100B00F42 /* ExcursionMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionMarkerView.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 			path = Excursions;
 			sourceTree = "<group>";
 		};
+		2E62D35A227B64BA000FE5F0 /* InfoPanel */ = {
+			isa = PBXGroup;
+			children = (
+				2E62D35B227B6504000FE5F0 /* InfoViewController.swift */,
+			);
+			path = InfoPanel;
+			sourceTree = "<group>";
+		};
 		2E702B16225CD4AD000DADCE /* Account */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +167,7 @@
 		2E877FBF21C9355300E76CE3 /* ARG */ = {
 			isa = PBXGroup;
 			children = (
+				2E62D35A227B64BA000FE5F0 /* InfoPanel */,
 				2E702B16225CD4AD000DADCE /* Account */,
 				2E350B99225CCD95008B36AE /* Excursions */,
 				2E350B96225CBE8B008B36AE /* Find */,
@@ -352,6 +363,7 @@
 				2E023B2621FE311800B3D8AC /* ViewControllerARSCNDelegate.swift in Sources */,
 				2E702B18225CD4CF000DADCE /* AccountViewController.swift in Sources */,
 				2E9FB76D21EE192C00AD2078 /* POIwork.swift in Sources */,
+				2E62D35C227B6505000FE5F0 /* InfoViewController.swift in Sources */,
 				2E877FC121C9355300E76CE3 /* AppDelegate.swift in Sources */,
 				2E7A0479225C6F8100B00F42 /* ExcursionMarkerView.swift in Sources */,
 				2E023B2021FD87A100B3D8AC /* ARScineViewController.swift in Sources */,

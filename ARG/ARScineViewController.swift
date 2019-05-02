@@ -15,6 +15,9 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var exit: UIButton!
     @IBOutlet weak var buildingNameLabel: UILabel!
     @IBOutlet weak var arSceneButtonsStackView: UIStackView!
+    @IBOutlet weak var infoPnl: UIView!
+    @IBOutlet weak var photoPnl: UIView!
+    @IBOutlet weak var backGround: UIImageView!
     
     var selectedImage : ImageInformation?
     
@@ -49,8 +52,10 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         if node.isHidden {
-            self.arSceneButtonsStackView.isHidden = true
-            self.buildingNameLabel.text = "Идет распознование объекта ..."
+            if backGround.isHidden == true {
+                self.arSceneButtonsStackView.isHidden = true
+                self.buildingNameLabel.text = "Идет распознование объекта ..."
+            }
         }else {
             self.arSceneButtonsStackView.isHidden = false
             self.buildingNameLabel.text = self.selectedImage?.name ?? "Нет объекта в базе"
@@ -69,6 +74,7 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
             
 //            self.buildingNameLabel.text = self.selectedImage?.name ?? "Building hasn't recognized"
 //            self.performSegue(withIdentifier: "showImageInformation", sender: self)
+
         }
     }
     
@@ -85,8 +91,38 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
         // Enable environment-based lighting
         sceneView.autoenablesDefaultLighting = true
         sceneView.automaticallyUpdatesLighting = true
+        
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+        rightSwipe.direction = .right
+        
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
+        leftSwipe.direction = .left
+        
+        backGround.isHidden = true
+        hideAll()
     }
     
+    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+        if sender.state == .ended {
+            switch sender.direction {
+            case .right:
+                if infoPnl.isHidden == false {
+                    debugPrint("right")
+                    infoPnl.isHidden = true
+                    photoPnl.isHidden = false
+                }
+            case .left:
+                if photoPnl.isHidden == true {
+                    debugPrint("left")
+                    photoPnl.isHidden = true
+                    infoPnl.isHidden = false
+                }
+            default:
+                debugPrint("default")
+            }
+        }
+    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showImageInformation"{
             if let imageInformationVC = segue.destination as? ImageInformationViewController,
@@ -125,5 +161,32 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
 
     @IBAction func exitTouchUpInside(_ sender: UIButton) {
         dismiss(animated: true)
+    }
+    
+    @IBAction func infoTouchUpInside(_ sender: UIButton) {
+        backGround.isHidden = false
+        hideAll()
+        infoPnl.isHidden = false
+    }
+    
+    @IBAction func photoTouchUpInside(_ sender: UIButton) {
+        backGround.isHidden = false
+        hideAll()
+        photoPnl.isHidden = false
+    }
+    
+    func hideAll() {
+        infoPnl.isHidden = true
+        photoPnl.isHidden = true
+    }
+    
+    @IBAction func closeInfoPnlTouchUpInside(_ sender: UIButton) {
+        backGround.isHidden = true
+        hideAll()
+    }
+    
+    @IBAction func closePhotoPnlTouchUpInside(_ sender: UIButton) {
+        backGround.isHidden = true
+        hideAll()
     }
 }

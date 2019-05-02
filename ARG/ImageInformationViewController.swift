@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ImageInformationViewController: UIViewController {
+class ImageInformationViewController: UICollectionViewController {
     @IBOutlet weak var closeButton: UIButton!
     @IBOutlet weak var imageLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -20,12 +20,11 @@ class ImageInformationViewController: UIViewController {
         super.viewDidLoad()
 
         if let actualImageInformation = imageInformation {
-//            self.imageLabel.text = actualImageInformation.name
-            self.imageView.image = actualImageInformation.image
-//            self.imageDescription.text = actualImageInformation.description
+//            self.imageView.image = actualImageInformation.image
         }
+        
+        view.backgroundColor = UIColor.red
     }
-    
 
     /*
     // MARK: - Navigation
