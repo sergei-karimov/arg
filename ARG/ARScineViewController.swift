@@ -18,6 +18,8 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var infoPnl: UIView!
     @IBOutlet weak var photoPnl: UIView!
     @IBOutlet weak var backGround: UIImageView!
+    @IBOutlet weak var backView: UIView!
+    @IBOutlet weak var labelTop: UILabel!
     
     var selectedImage : ImageInformation?
     
@@ -52,13 +54,14 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         if node.isHidden {
-            if backGround.isHidden == true {
-                self.arSceneButtonsStackView.isHidden = true
-                self.buildingNameLabel.text = "Идет распознование объекта ..."
-            }
+            self.arSceneButtonsStackView.isHidden = true
+            backView.isHidden = true
+            labelTop.isHidden = true
         }else {
             self.arSceneButtonsStackView.isHidden = false
-            self.buildingNameLabel.text = self.selectedImage?.name ?? "Нет объекта в базе"
+//            self.buildingNameLabel.text = self.selectedImage?.name ?? "Нет объекта в базе"
+            labelTop.isHidden = false
+            backView.isHidden = false
         }
     }
     
@@ -92,31 +95,27 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
         sceneView.autoenablesDefaultLighting = true
         sceneView.automaticallyUpdatesLighting = true
         
-        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
-        rightSwipe.direction = .right
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        downSwipe.direction = .down
         
-        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(sender:)))
-        leftSwipe.direction = .left
+//        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+//        leftSwipe.direction = .left
         
-        backGround.isHidden = true
-        hideAll()
+        self.backView.addGestureRecognizer(downSwipe)
+//        self.backView.addGestureRecognizer(leftSwipe)
+
+        labelTop.isHidden = true
+        backView.isHidden = true
     }
     
-    @objc func handleSwipe(sender: UISwipeGestureRecognizer) {
+    @objc func handleSwipes(_ sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             switch sender.direction {
-            case .right:
-                if infoPnl.isHidden == false {
-                    debugPrint("right")
-                    infoPnl.isHidden = true
-                    photoPnl.isHidden = false
-                }
-            case .left:
-                if photoPnl.isHidden == true {
-                    debugPrint("left")
-                    photoPnl.isHidden = true
-                    infoPnl.isHidden = false
-                }
+            case .down:
+                debugPrint("down")
+                dismiss(animated: true)
+//            case .left:
+//                debugPrint("left")
             default:
                 debugPrint("default")
             }
@@ -161,32 +160,32 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
 
     @IBAction func exitTouchUpInside(_ sender: UIButton) {
         dismiss(animated: true)
-    }
+    } 
     
     @IBAction func infoTouchUpInside(_ sender: UIButton) {
-        backGround.isHidden = false
-        hideAll()
-        infoPnl.isHidden = false
+//        backGround.isHidden = false
+//        hideAll()
+//        infoPnl.isHidden = false
     }
     
     @IBAction func photoTouchUpInside(_ sender: UIButton) {
-        backGround.isHidden = false
-        hideAll()
-        photoPnl.isHidden = false
+//        backGround.isHidden = false
+//        hideAll()
+//        photoPnl.isHidden = false
     }
     
     func hideAll() {
-        infoPnl.isHidden = true
-        photoPnl.isHidden = true
+//        infoPnl.isHidden = true
+//        photoPnl.isHidden = true
     }
     
     @IBAction func closeInfoPnlTouchUpInside(_ sender: UIButton) {
-        backGround.isHidden = true
-        hideAll()
+//        backGround.isHidden = true
+//        hideAll()
     }
     
     @IBAction func closePhotoPnlTouchUpInside(_ sender: UIButton) {
-        backGround.isHidden = true
-        hideAll()
+//        backGround.isHidden = true
+//        hideAll()
     }
 }
