@@ -31,6 +31,7 @@
 		2E9FB77421EE6EED00AD2078 /* PublicPOI_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FB77121EE6EED00AD2078 /* PublicPOI_en.json */; };
 		2E9FB77521EE6EED00AD2078 /* PublicPOI_rus.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FB77221EE6EED00AD2078 /* PublicPOI_rus.json */; };
 		2E9FB77621EE6EED00AD2078 /* PublicPOI_tat.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FB77321EE6EED00AD2078 /* PublicPOI_tat.json */; };
+		2EBFCB1C227CCA34003FC96E /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBFCB1B227CCA34003FC96E /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		2E9FB77121EE6EED00AD2078 /* PublicPOI_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PublicPOI_en.json; path = Resourses/PublicPOI_en.json; sourceTree = "<group>"; };
 		2E9FB77221EE6EED00AD2078 /* PublicPOI_rus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PublicPOI_rus.json; path = Resourses/PublicPOI_rus.json; sourceTree = "<group>"; };
 		2E9FB77321EE6EED00AD2078 /* PublicPOI_tat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PublicPOI_tat.json; path = Resourses/PublicPOI_tat.json; sourceTree = "<group>"; };
+		2EBFCB1B227CCA34003FC96E /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				2E62D35E227C3E62000FE5F0 /* DetailViewController.swift */,
+				2EBFCB1B227CCA34003FC96E /* CollectionViewCell.swift */,
 			);
 			path = DetailInfo;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				2E1B341121F74493001149BC /* Route.swift in Sources */,
 				2E2E929121F4CC3E00717F0A /* RoutePopupViewController.swift in Sources */,
 				2E1B341321F74CE0001149BC /* RouteCell.swift in Sources */,
+				2EBFCB1C227CCA34003FC96E /* CollectionViewCell.swift in Sources */,
 				2E023B2421FDE17800B3D8AC /* DTOImageInformation.swift in Sources */,
 				2E023B2221FDDD2200B3D8AC /* ImageInformationViewController.swift in Sources */,
 				2E62D35F227C3E62000FE5F0 /* DetailViewController.swift in Sources */,
