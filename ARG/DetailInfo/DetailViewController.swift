@@ -27,14 +27,20 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     
     @IBOutlet weak var infoPanel: UIView!
     @IBOutlet weak var photosPanel: UIView!
+    @IBOutlet weak var nightViewPanel: UIView!
+    @IBOutlet weak var historyPanel: UIView!
+    @IBOutlet weak var ticketPanel: UIView!
 
     @IBOutlet weak var infoHeartButton: UIButton!
     @IBOutlet weak var photosHeartButton: UIButton!
-    
+    @IBOutlet weak var nightViewHeartButton: UIButton!
+    @IBOutlet weak var historyHeartButton: UIButton!
+    @IBOutlet weak var ticketHeartButton: UIButton!
+
     var infoHeartState = false
     var photosHeartState = false
     var nightViewHeartState = false
-    var hestoryHeartState = false
+    var historyHeartState = false
     var ticketHeartState = false
 
     override func viewDidLoad() {
@@ -47,16 +53,33 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
         infoHeartState = false
         photosHeartState = false
         nightViewHeartState = false
-        hestoryHeartState = false
+        historyHeartState = false
         ticketHeartState = false
 
-        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
-        downSwipe.direction = .down
+        let downInfoSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        downInfoSwipe.direction = .down
         
-        infoPanel.addGestureRecognizer(downSwipe)
-        photosPanel.addGestureRecognizer(downSwipe)
-        
+        let downPhotosSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        downPhotosSwipe.direction = .down
+
+        let downNightViewSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        downNightViewSwipe.direction = .down
+
+        let downHistorySwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        downHistorySwipe.direction = .down
+
+        let downTicketSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        downTicketSwipe.direction = .down
+
+        infoPanel.addGestureRecognizer(downInfoSwipe)
+        photosPanel.addGestureRecognizer(downPhotosSwipe)
+        nightViewPanel.addGestureRecognizer(downNightViewSwipe)
+        historyPanel.addGestureRecognizer(downHistorySwipe)
+        ticketPanel.addGestureRecognizer(downTicketSwipe)
+
         hideAll()
+        
+        infoPanel.isHidden = false
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -73,6 +96,9 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     func hideAll() {
         infoPanel.isHidden = true
         photosPanel.isHidden = true
+        nightViewPanel.isHidden = true
+        historyPanel.isHidden = true
+        ticketPanel.isHidden = true
     }
     
     @IBAction func infoButtonTouchUpInside(_ sender: UIButton) {
@@ -85,6 +111,21 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
         photosPanel.isHidden = false
     }
     
+    @IBAction func nightViewTouchUpInside(_ sender: UIButton) {
+        hideAll()
+        nightViewPanel.isHidden = false
+    }
+
+    @IBAction func historyTouchUpInside(_ sender: UIButton) {
+        hideAll()
+        historyPanel.isHidden = false
+    }
+    
+    @IBAction func ticketTouchUpInside(_ sender: UIButton) {
+        hideAll()
+        ticketPanel.isHidden = false
+    }
+    
     @objc func handleSwipes(_ sender: UISwipeGestureRecognizer) {
         if sender.state == .ended {
             switch sender.direction {
@@ -95,6 +136,16 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
             //                debugPrint("left")
             default:
                 debugPrint("default")
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showLargeImage" {
+            if let indexPatrhs = collectionView?.indexPathsForSelectedItems {
+                let destinationController = segue.destination as! LargeImageViewController
+                destinationController.imageName = "карусель\(indexPatrhs[0].row + 1).jpg"
+                collectionView?.deselectItem(at: indexPatrhs[0], animated: false)
             }
         }
     }
@@ -116,6 +167,36 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
         }else {
             photosHeartButton.setImage(UIImage(named: "heart.png"), for: .normal)
             photosHeartState = false
+        }
+    }
+    
+    @IBAction func nightViewHeartTouchUpInside(_ sender: UIButton) {
+        if nightViewHeartState == false {
+            nightViewHeartButton.setImage(UIImage(named: "heart-active.png"), for: .normal)
+            nightViewHeartState = true
+        }else {
+            nightViewHeartButton.setImage(UIImage(named: "heart.png"), for: .normal)
+            nightViewHeartState = false
+        }
+    }
+    
+    @IBAction func historyHeartTouchUpInside(_ sender: UIButton) {
+        if historyHeartState == false {
+            historyHeartButton.setImage(UIImage(named: "heart-active.png"), for: .normal)
+            historyHeartState = true
+        }else {
+            historyHeartButton.setImage(UIImage(named: "heart.png"), for: .normal)
+            historyHeartState = false
+        }
+    }
+    
+    @IBAction func ticketHeartTouchUpInside(_ sender: UIButton) {
+        if ticketHeartState == false {
+            ticketHeartButton.setImage(UIImage(named: "heart-active.png"), for: .normal)
+            ticketHeartState = true
+        }else {
+            ticketHeartButton.setImage(UIImage(named: "heart.png"), for: .normal)
+            ticketHeartState = false
         }
     }
 }

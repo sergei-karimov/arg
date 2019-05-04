@@ -15,6 +15,7 @@
 		2E1B341321F74CE0001149BC /* RouteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1B341221F74CE0001149BC /* RouteCell.swift */; };
 		2E2E929121F4CC3E00717F0A /* RoutePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */; };
 		2E350B98225CBEB4008B36AE /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E350B97225CBEB4008B36AE /* FindViewController.swift */; };
+		2E5485B5227D79F300480DF3 /* LargeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5485B4227D79F300480DF3 /* LargeImageViewController.swift */; };
 		2E62D35F227C3E62000FE5F0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E62D35E227C3E62000FE5F0 /* DetailViewController.swift */; };
 		2E702B15225CCED7000DADCE /* ExcursionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E702B14225CCED7000DADCE /* ExcursionViewController.swift */; };
 		2E702B18225CD4CF000DADCE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E702B17225CD4CF000DADCE /* AccountViewController.swift */; };
@@ -60,6 +61,7 @@
 		2E1B341221F74CE0001149BC /* RouteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteCell.swift; sourceTree = "<group>"; };
 		2E2E929021F4CC3E00717F0A /* RoutePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutePopupViewController.swift; sourceTree = "<group>"; };
 		2E350B97225CBEB4008B36AE /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
+		2E5485B4227D79F300480DF3 /* LargeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeImageViewController.swift; sourceTree = "<group>"; };
 		2E62D35E227C3E62000FE5F0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2E702B14225CCED7000DADCE /* ExcursionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionViewController.swift; sourceTree = "<group>"; };
 		2E702B17225CD4CF000DADCE /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				2E62D35E227C3E62000FE5F0 /* DetailViewController.swift */,
 				2EBFCB1B227CCA34003FC96E /* CollectionViewCell.swift */,
+				2E5485B4227D79F300480DF3 /* LargeImageViewController.swift */,
 			);
 			path = DetailInfo;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E877FC321C9355300E76CE3 /* ViewController.swift in Sources */,
+				2E5485B5227D79F300480DF3 /* LargeImageViewController.swift in Sources */,
 				2E023B2621FE311800B3D8AC /* ViewControllerARSCNDelegate.swift in Sources */,
 				2E702B18225CD4CF000DADCE /* AccountViewController.swift in Sources */,
 				2E9FB76D21EE192C00AD2078 /* POIwork.swift in Sources */,
