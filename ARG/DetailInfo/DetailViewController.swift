@@ -37,12 +37,36 @@ class DetailViewController: UIViewController, UICollectionViewDelegate, UICollec
     @IBOutlet weak var historyHeartButton: UIButton!
     @IBOutlet weak var ticketHeartButton: UIButton!
 
+    @IBOutlet weak var openCloseLabel: UILabel!
+    @IBOutlet weak var closeAfterLabel: UILabel!
+    
     var infoHeartState = false
     var photosHeartState = false
     var nightViewHeartState = false
     var historyHeartState = false
     var ticketHeartState = false
 
+    override func viewWillAppear(_ animated: Bool) {
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        
+        if hour >= 10 && hour < 19 {
+            openCloseLabel.text = "Открыто"
+            closeAfterLabel.text = "Закроется через \(19 - hour) часов"
+        }else {
+            if hour < 10 {
+                openCloseLabel.text = "Закрыто"
+                closeAfterLabel.text = "Откроется через \(10 - hour) часов"
+            }
+            
+            if hour >= 19 {
+                openCloseLabel.text = "Закрыто"
+                closeAfterLabel.text = "Откроется через \(34 - hour) часов"
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

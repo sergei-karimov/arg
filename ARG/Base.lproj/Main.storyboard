@@ -30,13 +30,13 @@
                                         <rect key="frame" x="8" y="3" width="292" height="50"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="n_main-active" translatesAutoresizingMaskIntoConstraints="NO" id="1Bz-HV-nFf">
-                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="YQg-36-KDk"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww7-Cy-jTd" userLabel="tours">
-                                                <rect key="frame" x="80.5" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="80.5" y="0.0" width="16" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="gKy-fa-AT8"/>
                                                 </constraints>
@@ -49,7 +49,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKe-Uj-Nka">
-                                                <rect key="frame" x="161.5" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="161.5" y="0.0" width="16" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="4q7-Qh-Tqo"/>
                                                 </constraints>
@@ -81,24 +81,24 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="wog-b1-Jcg">
-                                <rect key="frame" x="261" y="176" width="51" height="216"/>
+                                <rect key="frame" x="261" y="218" width="51" height="132"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kWS-FV-Vre">
-                                        <rect key="frame" x="0.0" y="0.0" width="51" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="22"/>
                                         <state key="normal" image="n_plus"/>
                                         <connections>
                                             <action selector="MapPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3OZ-FJ-cQh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS6-KS-2Rx">
-                                        <rect key="frame" x="0.0" y="83" width="51" height="50"/>
+                                        <rect key="frame" x="0.0" y="55" width="51" height="22"/>
                                         <state key="normal" image="n_minus"/>
                                         <connections>
                                             <action selector="MapMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R8r-mB-05F"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVg-TT-Vm8">
-                                        <rect key="frame" x="0.0" y="166" width="51" height="50"/>
+                                        <rect key="frame" x="0.0" y="110" width="51" height="22"/>
                                         <state key="normal" image="n_arrow"/>
                                         <connections>
                                             <action selector="MapIAmHere:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2NS-d2-u61"/>
@@ -110,7 +110,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHc-4K-phg">
-                                <rect key="frame" x="85" y="209" width="150" height="150"/>
+                                <rect key="frame" x="152" y="273" width="16" height="22"/>
                                 <state key="normal" image="objects">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
@@ -120,17 +120,17 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-Sd-ynd">
-                                <rect key="frame" x="193" y="72" width="119" height="48"/>
+                                <rect key="frame" x="261" y="72" width="51" height="48"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gU9-eZ-wXP">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="48"/>
                                         <state key="normal" image="n_recognize"/>
                                         <connections>
                                             <action selector="showHideObjectsTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6YI-O3-5Fd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0H-va-ndI">
-                                        <rect key="frame" x="69" y="0.0" width="50" height="48"/>
+                                        <rect key="frame" x="35" y="0.0" width="16" height="48"/>
                                         <state key="normal" image="n_search"/>
                                         <connections>
                                             <action selector="search_TouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSZ-Zu-iKu"/>
@@ -149,7 +149,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZH-Xh-ftg">
-                                <rect key="frame" x="6" y="173" width="308" height="317.00000000000045"/>
+                                <rect key="frame" x="6" y="173" width="308" height="317"/>
                                 <state key="normal" backgroundImage="кабинет"/>
                                 <connections>
                                     <action selector="cabinetWindowTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VMz-mv-JbK"/>
@@ -524,7 +524,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="полоска" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-iT-4zZ">
-                                        <rect key="frame" x="8" y="48" width="288" height="3"/>
+                                        <rect key="frame" x="8" y="35" width="288" height="16"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.011764705882352941" green="0.1803921568627451" blue="0.34901960784313724" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -661,7 +661,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="фото ночой вид" translatesAutoresizingMaskIntoConstraints="NO" id="kgg-CX-GIx">
-                                        <rect key="frame" x="8" y="61.5" width="288" height="403.50000000000023"/>
+                                        <rect key="frame" x="8" y="61.5" width="288" height="403.5"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.01176470588" green="0.18039215689999999" blue="0.34901960780000002" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -731,16 +731,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЗАГС:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zZ0-x5-SiQ">
-                                        <rect key="frame" x="8" y="131.5" width="288" height="41"/>
+                                        <rect key="frame" x="8" y="131.5" width="288" height="27"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="41" id="9gh-ef-In8"/>
+                                            <constraint firstAttribute="height" constant="27" id="9gh-ef-In8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxJ-ok-Nqp">
-                                        <rect key="frame" x="8" y="173.5" width="288" height="90"/>
+                                        <rect key="frame" x="8" y="159.5" width="288" height="90"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="90" id="XjG-a2-jHr"/>
@@ -754,16 +754,16 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="СМОТРОВАЯ ПЛОЩАДКА:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXp-h5-DCZ">
-                                        <rect key="frame" x="8" y="268.5" width="288" height="41"/>
+                                        <rect key="frame" x="8" y="254.5" width="288" height="27"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="41" id="9Ae-HD-UxB"/>
+                                            <constraint firstAttribute="height" constant="27" id="9Ae-HD-UxB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZuG-C7-27e">
-                                        <rect key="frame" x="8" y="310.5" width="288" height="45"/>
+                                        <rect key="frame" x="8" y="282.5" width="288" height="45"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="TW4-9X-c58"/>
@@ -851,10 +851,10 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5pn-rS-LT6">
-                                        <rect key="frame" x="8" y="146.5" width="288" height="95"/>
+                                        <rect key="frame" x="8" y="146.5" width="288" height="115"/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="95" id="JLl-gx-QcL"/>
+                                            <constraint firstAttribute="height" constant="115" id="JLl-gx-QcL"/>
                                         </constraints>
                                         <string key="text">Расписание работы смотровой площадки центра семьи Казан на летний сезон 2019 года: среда-воскресенье 10:00-19:00. Понедельник-вторник – выходной.</string>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -927,6 +927,7 @@
                         <viewLayoutGuide key="safeArea" id="laD-Dw-AMG"/>
                     </view>
                     <connections>
+                        <outlet property="closeAfterLabel" destination="v2a-6S-p3R" id="bpG-03-WXh"/>
                         <outlet property="collectionView" destination="q7d-hN-N3g" id="ehe-pB-CbW"/>
                         <outlet property="historyButton" destination="5io-9p-wqG" id="GPt-nU-Cbp"/>
                         <outlet property="historyHeartButton" destination="2Ag-mW-ase" id="CF7-vc-cfB"/>
@@ -937,6 +938,7 @@
                         <outlet property="nightViewButton" destination="odB-mL-GXv" id="HZ1-kS-yT4"/>
                         <outlet property="nightViewHeartButton" destination="GNg-lc-hA1" id="MNg-e0-VJO"/>
                         <outlet property="nightViewPanel" destination="wsN-6m-opn" id="LDX-gG-CCp"/>
+                        <outlet property="openCloseLabel" destination="JBI-b6-Um6" id="yfd-hp-S6U"/>
                         <outlet property="photosButton" destination="w9y-Ls-X2W" id="DJ2-6k-1jG"/>
                         <outlet property="photosHeartButton" destination="eWq-iv-jRQ" id="uHv-3g-A52"/>
                         <outlet property="photosPanel" destination="TxD-JG-Gem" id="8xr-P2-egR"/>
