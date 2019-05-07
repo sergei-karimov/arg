@@ -8,8 +8,9 @@
 
 import UIKit
 import ARKit
+import CoreLocation
 
-class ARScineViewController: UIViewController, ARSCNViewDelegate {
+class ARScineViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
     /// Primary SceneKit view that renders the AR session
     @IBOutlet weak var sceneView: ARSCNView!
     @IBOutlet weak var exit: UIButton!
@@ -22,6 +23,8 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet weak var labelTop: UILabel!
     
     var selectedImage : ImageInformation?
+    
+    let locationManager = CLLocationManager()
     
     let images = [
         "Picture1" : ImageInformation(name: "ЛИТЕРАТУРНЫЙ МУЗЕЙ М.И. ЦВЕТАЕВОЙ", description: "Открыт 29 декабря 2003\nЭкспозиция музея рассказывает о литературном творчестве Марины Цветаевой, её творческих и дружеских связях с литературными деятелями эпохи: М. Волошиным, О. Мандельштамом, Б. Пастернаком, В. Маяковским, А. Белым, В. Ходасевичем и др., отношении современников к личности и творчеству поэта и о знаковых событиях в жизни Марины Цветаевой.", image: UIImage(named: "1")!),
@@ -95,6 +98,12 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (CLLocationManager.headingAvailable()) {
+            locationManager.headingFilter = 1
+            locationManager.startUpdatingHeading()
+            locationManager.delegate = self
+        }
+        
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -116,6 +125,10 @@ class ARScineViewController: UIViewController, ARSCNViewDelegate {
 
         labelTop.isHidden = true
         backView.isHidden = true
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading heading: CLHeading) {
+        debugPrint(heading.trueHeading)
     }
     
     @objc func handleSwipes(_ sender: UISwipeGestureRecognizer) {
